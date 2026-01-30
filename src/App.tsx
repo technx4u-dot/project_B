@@ -9,6 +9,8 @@ import DashboardOverview from './pages/dashboard/Overview';
 import UserManagement from './pages/dashboard/UserManagement';
 import AddProducts from './pages/dashboard/AddProducts';
 import AddVouchers from './pages/dashboard/AddVouchers';
+import Orders from './pages/dashboard/Orders';
+import Shipping from './pages/dashboard/Shipping';
 
 const App: React.FC = () => {
   const [session, setSession] = useState<any>(null);
@@ -55,6 +57,8 @@ const App: React.FC = () => {
           <Route path="users" element={<UserManagement />} />
           <Route path="products" element={<AddProducts />} />
           <Route path="vouchers" element={<AddVouchers />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="shipping" element={<Shipping />} />
         </Route>
 
         <Route path="/" element={<Navigate to={session ? "/dashboard" : "/login"} />} />

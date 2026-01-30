@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Users, ShoppingBag, Ticket, LogOut, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Users, ShoppingBag, Ticket, LogOut, Menu, X, Package, Truck } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
 
 const DashboardLayout: React.FC = () => {
@@ -18,6 +18,8 @@ const DashboardLayout: React.FC = () => {
         { name: 'User Management', path: '/dashboard/users', icon: <Users size={20} /> },
         { name: 'Add Products', path: '/dashboard/products', icon: <ShoppingBag size={20} /> },
         { name: 'Add Vouchers', path: '/dashboard/vouchers', icon: <Ticket size={20} /> },
+        { name: 'Orders', path: '/dashboard/orders', icon: <Package size={20} /> },
+        { name: 'Shipping', path: '/dashboard/shipping', icon: <Truck size={20} /> },
     ];
 
     return (
